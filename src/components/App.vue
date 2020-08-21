@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <Header :title="'Composition API'" />
+    <Header :title="'Movie Finder'" />
     <Search :search="state.search" @search="handleSearch" />
-    <p class="intro">Sharing a few of our favourite movies</p>
+    <p class="intro">Search your favorite movies</p>
     <div class="movies">
       <Movie v-for="movie in state.movies" :movie="movie" :key="movie.imdbID" />
     </div>
@@ -16,7 +16,11 @@
   import { useMovieApi } from '../hooks/movie-api';
   export default {
     name: 'app',
-    components: { Header, Search, Movie },
+    components: { 
+      Header, 
+      Search, 
+      Movie 
+      },
     setup() {
       const state = useMovieApi();
       return {

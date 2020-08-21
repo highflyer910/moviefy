@@ -7,9 +7,13 @@
 <script>
   export default {
     name: 'Header',
-    props: ['title'],
+    props: [
+      'title'
+      ],
     setup({ title }) {
-      return { titleText: title };
+      return { 
+        titleText: title 
+        };
     }
   }
 </script>

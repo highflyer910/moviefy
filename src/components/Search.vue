@@ -11,9 +11,12 @@
 
 <script>
   import { ref } from '@vue/composition-api';
+
   export default {
     name: 'Search',
-    props: ['search'],
+    props: [
+      'search'
+      ],
     setup({ search }, { emit }) {
       const movieTitle = ref(search);
       return {

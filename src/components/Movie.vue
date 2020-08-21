@@ -5,6 +5,8 @@
       <img width="200" :alt="altText" :src="movie.Poster" />
     </div>
     <p>{{ movie.Year }}</p>
+    <p>{{ movie.Rated }}</p>
+    <p>{{ movie.Genre }}</p>
   </div>
 </template>
 
@@ -12,10 +14,14 @@
   import { computed } from '@vue/composition-api';
   export default {
     name: "Movie",
-    props: ['movie'],
+    props: [
+      'movie'
+      ],
     setup({ movie }) {
       const altText = computed(() => `The movie titled: ${movie.Title}`);
-      return { altText };
+      return { 
+        altText 
+        };
     }
   };
 </script>
