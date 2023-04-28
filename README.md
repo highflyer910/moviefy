@@ -1,16 +1,29 @@
-# Movie Finder
+# MovieFy
 
-Built with Composition API of Vue 3
+Movies search application built using Vue 3 in Vite.
 
-## Build Setup
+## Recommended IDE Setup
 
-``` bash
-# install dependencies
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
 npm install
+```
 
-# serve with hot reload at localhost:8080
-npm run serve
+### Compile and Hot-Reload for Development
 
-# build for production with minification
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
 npm run build
 ```

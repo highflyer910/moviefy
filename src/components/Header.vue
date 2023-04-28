@@ -1,19 +1,26 @@
 <template>
-  <header class="header">
-    <h2>{{ titleText }}</h2>
-  </header>
-</template>
-
-<script>
+    <header class="header">
+      <h2>{{ titleText }}</h2>
+    </header>
+  </template>
+  
+  <script>
   export default {
     name: 'Header',
-    props: [
-      'title'
-      ],
-    setup({ title }) {
+    props: {
+      title: String
+    },
+    setup(props) {
       return { 
-        titleText: title 
-        };
+        titleText: props.title 
+      };
     }
   }
 </script>
+
+
+
+
+
+
+

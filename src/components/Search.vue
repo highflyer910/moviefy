@@ -10,25 +10,27 @@
 </template>
 
 <script>
-  import { ref } from '@vue/composition-api';
+  import { ref } from 'vue';
 
   export default {
     name: 'Search',
-    props: [
-      'search'
-      ],
-    setup({ search }, { emit }) {
-      const movieTitle = ref(search);
+    props: {
+      search: String
+    },
+    setup(props, { emit }) {
+      const movieTitle = ref(props.search);
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        emit('search', movieTitle.value);
+      };
+      const handleChange = (event) => {
+        movieTitle.value = event.target.value;
+      };
       return {
         movieTitle,
-        handleSubmit(event) {
-          event.preventDefault();
-          emit('search', movieTitle.value);
-        },
-        handleChange(event) {
-          movieTitle.value = event.target.value
-        }
-      }
+        handleSubmit,
+        handleChange
+      };
     }
   };
 </script>
